@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+/* CSS for Movie Card */
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 0.625em;
+    line-height: 1.3;
+    background-color: #000;
+}
+
+.card {
+    background: #5858584d;
+    display: none;
+    max-width: 34.375em;
+    height: 17.1875em;
+    border-radius: 0.25em;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Make it column based for mobile devices */
+@media (max-width: 520px) {
+    .card {
+        background: rgba(0, 0, 0, 0.3);
+        display: none;
+        flex-direction: column;
+        height: auto;
+        box-shadow: 0.25em 0.25em 0.625em rgba(255, 255, 255, 0.2);
+    }
+}
+
+.card .movie_image {
+    min-width: 11.45rem;
+    padding: 0px 0.625em;
+    display: flex;
+    position: relative;
+    z-index: 99;
+}
+
+/* Adjust movie image for mobile devices */
+
+@media (max-width: 520px) {
+    .card .movie_image {
+        display: block;
+        flex-basis: auto;
+        margin: 0 auto;
+        height: 12.5em;
+        padding: 0.625em 0;
+        margin-bottom: 1.5625em;
+        overflow: hidden;
+    }
+}
+
+.card .movie_image .movie_poster {
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+}
+
+.card .center {
+    display: flex;
+    align-items: center;
+    vertical-align: center;
+    position: relative;
+    z-index: 99;
+}
+
+/* Adjust padding for mobile devices */
+
+@media (max-width: 520px) {
+    .card .center {
+        padding: 0.625em 0px;
+    }
+}
+
+.card .about_movie {
+    flex-basis: 100%;
+    padding: 0px 0.625em;
+    position: relative;
+    z-index: 99;
+}
+
+/* Center meta data for movie for mobile devices */
+
+@media (max-width: 520px) {
+    .card .about_movie {
+        align-items: center;
+        text-align: center;
+    }
+}
+
+.card .about_movie h3 {
+    color: #fff;
+    font-size: 1.5625em;
+    margin-bottom: 0.625em;
+    margin-top: 0px;
+    text-align: center;
+}
+
+.card .about_movie .movie_info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.875em;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+@media (max-width: 520px) {
+    .card .about_movie .movie_info {
+        justify-content: space-around;
+    }
+}
+
+.card .about_movie .movie_desc {
+    font-size: 1em;
+    margin-top: 1.5625em;
+    margin-bottom: 1.5625em;
+    color: white;
+    position: relative;
+    z-index: 99;
+}
+
+.card .tide {
+    position: absolute;
+    bottom: calc(0px);
+    fill: crimson;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+    z-index: 0;
+}
+
+/* Background */
+
+.bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    -webkit-filter: blur(0.625em);
+    filter: blur(0.625em);
+}
+
+.bg img {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+/* Adjust for landscape orentation */
+
+@media (orientation: landscape) {
+    .card .about_movie {
+        padding: 0;
+    }
+}
