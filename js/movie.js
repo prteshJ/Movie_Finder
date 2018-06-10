@@ -66,10 +66,10 @@ $(document).ready(() => {
         // http://www.omdbapi.com/?apikey=375079d2&t=Sholay&y=1975
 
         if (idEntered(movieQuery)) {
-            movieUrl = 'http://www.omdbapi.com/?apikey=' + apiKey + '&i=' + movieQuery;
+            movieUrl = 'https://www.omdbapi.com/?apikey=' + apiKey + '&i=' + movieQuery;
         } else {
             if (titleEntered(movieQuery)) {
-                movieUrl = 'http://www.omdbapi.com/?apikey=' + apiKey + '&t=' + movieQuery;
+                movieUrl = 'https://www.omdbapi.com/?apikey=' + apiKey + '&t=' + movieQuery;
             }
         }
 
@@ -78,7 +78,7 @@ $(document).ready(() => {
             console.log(movieDetails[0]);
             title = movieDetails[0],
                 year = movieDetails[1];
-            movieUrl = 'http://www.omdbapi.com/?apikey=' + apiKey + '&t=' + title + '&y=' + year;
+            movieUrl = 'https://www.omdbapi.com/?apikey=' + apiKey + '&t=' + title + '&y=' + year;
         }
 
         // Replace all spaces by '+' as the API does
