@@ -62,7 +62,7 @@
 
 .search__input {
     font-family: inherit;
-    font-size: 90%;
+    font-size: 2.1vmax;
     font-weight:bold;
     line-height: 1;
     display: inline-flex;
